@@ -17,7 +17,7 @@ namespace The_Rating_Predictor
         public const string RetrainFilePath =  @"C:\Users\Mike PC\Desktop\archive\anime.csv";
         public const char RetrainSeparatorChar = ',';
         public const bool RetrainHasHeader =  true;
-        public const bool RetrainAllowQuoting =  false;
+        public const bool RetrainAllowQuoting =  true;
 
          /// <summary>
         /// Train a new model with the provided dataset.
@@ -97,7 +97,7 @@ namespace The_Rating_Predictor
                                     .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"episodes",outputColumnName:@"episodes"))      
                                     .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"members",outputColumnName:@"members"))      
                                     .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"anime_id",@"name",@"genre",@"type",@"episodes",@"members"}))      
-                                    .Append(mlContext.Regression.Trainers.FastForest(new FastForestRegressionTrainer.Options(){NumberOfTrees=4,NumberOfLeaves=4,FeatureFraction=1F,LabelColumnName=@"rating",FeatureColumnName=@"Features"}));
+                                    .Append(mlContext.Regression.Trainers.FastTree(new FastTreeRegressionTrainer.Options(){NumberOfLeaves=103,MinimumExampleCountPerLeaf=13,NumberOfTrees=11,MaximumBinCountPerFeature=52,FeatureFraction=0.7318780936634063,LearningRate=0.333235298840829,LabelColumnName=@"rating",FeatureColumnName=@"Features",DiskTranspose=false}));
 
             return pipeline;
         }

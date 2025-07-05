@@ -3,10 +3,10 @@
   "DataSource": {
     "Version": 3,
     "EscapeCharacter": "\"",
-    "ReadMultiLines": false,
+    "ReadMultiLines": true,
     "KeepDiacritics": false,
     "KeepPunctuations": false,
-    "AllowQuoting": false,
+    "AllowQuoting": true,
     "Type": "TabularFile",
     "FilePath": "C:\\Users\\Mike PC\\Desktop\\archive\\anime.csv",
     "Delimiter": ",",
@@ -57,7 +57,7 @@
         "ColumnName": "rating",
         "ColumnPurpose": "Label",
         "ColumnDataFormat": "Single",
-        "IsCategorical": false,
+        "IsCategorical": true,
         "Type": "Column",
         "Version": 5
       },
@@ -82,65 +82,9 @@
       {
         "Version": 1,
         "Type": "Trial",
-        "TrainerName": "FastForestRegression",
-        "Score": 0.10030428106505507,
-        "RuntimeInSeconds": 4.095,
-        "Parameter": {
-          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e8",
-          "e0": {
-            "OutputColumnNames": [
-              "anime_id"
-            ],
-            "InputColumnNames": [
-              "anime_id"
-            ]
-          },
-          "e1": {
-            "InputColumnName": "name",
-            "OutputColumnName": "name"
-          },
-          "e2": {
-            "InputColumnName": "genre",
-            "OutputColumnName": "genre"
-          },
-          "e3": {
-            "InputColumnName": "type",
-            "OutputColumnName": "type"
-          },
-          "e4": {
-            "InputColumnName": "episodes",
-            "OutputColumnName": "episodes"
-          },
-          "e5": {
-            "InputColumnName": "members",
-            "OutputColumnName": "members"
-          },
-          "e6": {
-            "InputColumnNames": [
-              "anime_id",
-              "name",
-              "genre",
-              "type",
-              "episodes",
-              "members"
-            ],
-            "OutputColumnName": "Features"
-          },
-          "e8": {
-            "NumberOfTrees": 4,
-            "NumberOfLeaves": 4,
-            "FeatureFraction": 1.0,
-            "LabelColumnName": "rating",
-            "FeatureColumnName": "Features"
-          }
-        }
-      },
-      {
-        "Version": 1,
-        "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.0454968789665998,
-        "RuntimeInSeconds": 2.726,
+        "Score": 0.48775920264738615,
+        "RuntimeInSeconds": 8.03,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e7",
           "e0": {
@@ -183,12 +127,252 @@
             "OutputColumnName": "Features"
           },
           "e7": {
-            "NumberOfLeaves": 4,
-            "MinimumExampleCountPerLeaf": 20,
-            "NumberOfTrees": 4,
-            "MaximumBinCountPerFeature": 254,
-            "FeatureFraction": 1.0,
-            "LearningRate": 0.099999999999999978,
+            "NumberOfLeaves": 103,
+            "MinimumExampleCountPerLeaf": 13,
+            "NumberOfTrees": 11,
+            "MaximumBinCountPerFeature": 52,
+            "FeatureFraction": 0.73187809366340628,
+            "LearningRate": 0.333235298840829,
+            "LabelColumnName": "rating",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.4873109097160806,
+        "RuntimeInSeconds": 7.876,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e7",
+          "e0": {
+            "OutputColumnNames": [
+              "anime_id"
+            ],
+            "InputColumnNames": [
+              "anime_id"
+            ]
+          },
+          "e1": {
+            "InputColumnName": "name",
+            "OutputColumnName": "name"
+          },
+          "e2": {
+            "InputColumnName": "genre",
+            "OutputColumnName": "genre"
+          },
+          "e3": {
+            "InputColumnName": "type",
+            "OutputColumnName": "type"
+          },
+          "e4": {
+            "InputColumnName": "episodes",
+            "OutputColumnName": "episodes"
+          },
+          "e5": {
+            "InputColumnName": "members",
+            "OutputColumnName": "members"
+          },
+          "e6": {
+            "InputColumnNames": [
+              "anime_id",
+              "name",
+              "genre",
+              "type",
+              "episodes",
+              "members"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e7": {
+            "NumberOfLeaves": 104,
+            "MinimumExampleCountPerLeaf": 14,
+            "NumberOfTrees": 11,
+            "MaximumBinCountPerFeature": 53,
+            "FeatureFraction": 0.73195674857494364,
+            "LearningRate": 0.33298404018258471,
+            "LabelColumnName": "rating",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.48716382757411231,
+        "RuntimeInSeconds": 7.901,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e7",
+          "e0": {
+            "OutputColumnNames": [
+              "anime_id"
+            ],
+            "InputColumnNames": [
+              "anime_id"
+            ]
+          },
+          "e1": {
+            "InputColumnName": "name",
+            "OutputColumnName": "name"
+          },
+          "e2": {
+            "InputColumnName": "genre",
+            "OutputColumnName": "genre"
+          },
+          "e3": {
+            "InputColumnName": "type",
+            "OutputColumnName": "type"
+          },
+          "e4": {
+            "InputColumnName": "episodes",
+            "OutputColumnName": "episodes"
+          },
+          "e5": {
+            "InputColumnName": "members",
+            "OutputColumnName": "members"
+          },
+          "e6": {
+            "InputColumnNames": [
+              "anime_id",
+              "name",
+              "genre",
+              "type",
+              "episodes",
+              "members"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e7": {
+            "NumberOfLeaves": 102,
+            "MinimumExampleCountPerLeaf": 14,
+            "NumberOfTrees": 11,
+            "MaximumBinCountPerFeature": 52,
+            "FeatureFraction": 0.73261929048825414,
+            "LearningRate": 0.33639288331989542,
+            "LabelColumnName": "rating",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.48715879782828458,
+        "RuntimeInSeconds": 7.819,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e7",
+          "e0": {
+            "OutputColumnNames": [
+              "anime_id"
+            ],
+            "InputColumnNames": [
+              "anime_id"
+            ]
+          },
+          "e1": {
+            "InputColumnName": "name",
+            "OutputColumnName": "name"
+          },
+          "e2": {
+            "InputColumnName": "genre",
+            "OutputColumnName": "genre"
+          },
+          "e3": {
+            "InputColumnName": "type",
+            "OutputColumnName": "type"
+          },
+          "e4": {
+            "InputColumnName": "episodes",
+            "OutputColumnName": "episodes"
+          },
+          "e5": {
+            "InputColumnName": "members",
+            "OutputColumnName": "members"
+          },
+          "e6": {
+            "InputColumnNames": [
+              "anime_id",
+              "name",
+              "genre",
+              "type",
+              "episodes",
+              "members"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e7": {
+            "NumberOfLeaves": 106,
+            "MinimumExampleCountPerLeaf": 14,
+            "NumberOfTrees": 11,
+            "MaximumBinCountPerFeature": 53,
+            "FeatureFraction": 0.73160434546420183,
+            "LearningRate": 0.32857188786744845,
+            "LabelColumnName": "rating",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.48582929232483008,
+        "RuntimeInSeconds": 7.984,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e7",
+          "e0": {
+            "OutputColumnNames": [
+              "anime_id"
+            ],
+            "InputColumnNames": [
+              "anime_id"
+            ]
+          },
+          "e1": {
+            "InputColumnName": "name",
+            "OutputColumnName": "name"
+          },
+          "e2": {
+            "InputColumnName": "genre",
+            "OutputColumnName": "genre"
+          },
+          "e3": {
+            "InputColumnName": "type",
+            "OutputColumnName": "type"
+          },
+          "e4": {
+            "InputColumnName": "episodes",
+            "OutputColumnName": "episodes"
+          },
+          "e5": {
+            "InputColumnName": "members",
+            "OutputColumnName": "members"
+          },
+          "e6": {
+            "InputColumnNames": [
+              "anime_id",
+              "name",
+              "genre",
+              "type",
+              "episodes",
+              "members"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e7": {
+            "NumberOfLeaves": 103,
+            "MinimumExampleCountPerLeaf": 13,
+            "NumberOfTrees": 11,
+            "MaximumBinCountPerFeature": 52,
+            "FeatureFraction": 0.73195434039845986,
+            "LearningRate": 0.33338378031490418,
             "LabelColumnName": "rating",
             "FeatureColumnName": "Features",
             "DiskTranspose": false
@@ -220,7 +404,7 @@
     "Version": 2,
     "Subsampling": false,
     "Type": "RegressionTrainingOption",
-    "TrainingTime": 10,
+    "TrainingTime": 7200,
     "LabelColumn": "rating",
     "ValidationOption": {
       "Version": 0,
