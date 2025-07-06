@@ -45,6 +45,7 @@ namespace The_Rating_Predictor
             }
         }
 
+
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
